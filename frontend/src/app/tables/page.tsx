@@ -1,10 +1,13 @@
 "use client"
 
+import "./tables.css"
 import { getTables } from "@/services/api";
+import { Table } from "@/types";
 import { useEffect, useState } from "react";
+import { TableItem } from "./components/TableItem";
 
 export default function Tables() {
-    const [tables, setTables] = useState<any[] | null>(null);
+    const [tables, setTables] = useState<Table[] | null>(null);
 
     useEffect(() => {
         getTables().then(setTables)
@@ -13,7 +16,11 @@ export default function Tables() {
     return (
       <div>
           Tables
-          <pre>{JSON.stringify(tables, null, 2)}</pre>
+          <div className="tables-container">
+            {tables?.map( table => (
+                <TableItem key={table.id} table={table} />
+            ))}
+          </div>
       </div>
     );
   }
