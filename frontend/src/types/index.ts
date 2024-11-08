@@ -14,4 +14,9 @@ export interface MenuItem {
 export interface Category {
   id: string;
   name: string;
+  items?: MenuItem[]
+}
+
+export interface MenuType {
+  categories: Category[]
 }
