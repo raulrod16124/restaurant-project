@@ -1,8 +1,8 @@
 "use client"
-import { getMenu } from "@/services/api";
 import { MenuType } from "@/types";
 import { useEffect, useState } from "react";
 import { defaultMenu } from "./helper/defaultMenu";
+import { getMenu } from "@/services/menu";
 
 export default function Menu() {
     const [menu, setMenu] = useState<MenuType | null>(null);

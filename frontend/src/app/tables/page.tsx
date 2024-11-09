@@ -1,17 +1,17 @@
 "use client"
 
 import "./tables.css"
-import { getTables } from "@/services/api";
 import { Table } from "@/types";
 import { useEffect, useState } from "react";
 import { TableItem } from "./components/TableItem";
 import Link from "next/link";
+import { getTables } from "@/services/tables";
 
 export default function Tables() {
-    const [tables, setTables] = useState<Table[] | null>(null);
+    const [tables, setTables] = useState<Table[]>([]);
 
     useEffect(() => {
-        getTables().then(setTables)
+      getTables().then(setTables)
     },[])
 
     return (
