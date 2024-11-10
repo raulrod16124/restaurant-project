@@ -22,8 +22,10 @@ describe("Tables Component", () => {
     jest.clearAllMocks();
   });
 
-  test("renders title", () => {
-    render(<Tables />);
+  test("renders title", async () => {
+    await act(async () => {
+      render(<Tables />);
+    });
     expect(screen.getByRole("heading", { name: "Mapa de las mesas:" })).toBeInTheDocument();
   });
 
