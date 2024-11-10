@@ -26,4 +26,9 @@
 .saveButton:hover {
     background-color: #357ab8;
 }
+
+.errorText {
+    color: red;
+    padding: 5px 0;
+}
   
