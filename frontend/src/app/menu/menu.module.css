@@ -1,0 +1,70 @@
+.menuContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menuContainer > div:not(:first-child) {
+    border-top: 1px solid #ccc;
+}
+
+.menuTitle {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #4a90e2;
+}
+  
+.categoryCard {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.categoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.categoryName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+  
+.buttonContainer {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.button{
+    margin: 10px 0;
+    cursor: pointer;
+}
+  
+.itemCard {
+    background-color: #f1f3f6;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.itemDescription {
+    font-size: 1rem;
+    color: #555;
+}
+  
+.itemPrice {
+    font-weight: bold;
+    color: #4a90e2;
+}
+  
