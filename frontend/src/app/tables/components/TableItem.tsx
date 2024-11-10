@@ -32,7 +32,7 @@ export const TableItem = ({table}: IProps) => {
   }
 
   const getTableRequest = async () => {
-    const tableRequest = await getTableRequestAction(table.id)
+    const tableRequest = await getTableRequestAction(table.id) || [];
     setTableRequest(tableRequest)
     const totalPrice = tableRequest.reduce((acc: number, cur: TableRequestItem) => acc + cur.price, 0);
     setTableRequestTotalPrice(totalPrice)
