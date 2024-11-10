@@ -5,6 +5,11 @@ export type Table = {
 
 export type TableState = "Empty" | "Waiting" | "Attended"
 
+export interface TableRequestItem {
+  description: string;
+  price: number;
+}
+
 export interface MenuItem {
   id: string;
   description: string;
