@@ -20,3 +20,15 @@ export interface Category {
 export interface MenuType {
   categories: Category[]
 }
+
+export interface UpdateMenuItemInput {
+  id: string;
+  description?: string;
+  price?: number;
+  categoryId?: string;
+}
+
+export interface UpdateCategoryInput {
+  id: string;
+  name: string;
+}
