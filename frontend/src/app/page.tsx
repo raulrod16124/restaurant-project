@@ -12,7 +12,7 @@ export default function Home() {
           width={180}
           height={180}
         />
-        <h1 className="title">Restaurant</h1>
+        <h1>Restaurant</h1>
         <div className="links-container">
           <Link className="link" href="/tables">Tables</Link>
           <Link className="link" href="/menu">Menu</Link>

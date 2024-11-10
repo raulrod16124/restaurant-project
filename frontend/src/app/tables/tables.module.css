@@ -1,4 +1,4 @@
-.tables-container {
+.tablesContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,14 +15,14 @@
     justify-content: center;
 }
 
-.table-title{
+.tableTitle{
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
     margin: 50px 0 10px 0;
 }
 
-.back-link{
+.backLink{
     position: absolute;
     top: 25px;
     left: 50px;
@@ -40,6 +40,6 @@
     transition: all .3s ease-in-out;
 }
 
-.back-link:hover{
+.backLink:hover{
     transform: scale(1.1);
 }

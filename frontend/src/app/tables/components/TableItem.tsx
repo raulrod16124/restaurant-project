@@ -1,4 +1,4 @@
-import "./../tables.css"
+import styles from "./../tables.module.css"
 import React from 'react'
 import emptyTable from "@/assets/empty_table.png"
 import waitingTable from "@/assets/waiting_table.png"
@@ -23,7 +23,7 @@ export const TableItem = ({table}: IProps) => {
   }
 
   return (
-    <div className="table">
+    <div className={styles.table}>
       <Image 
         src={tableImage[table.state]} 
         alt='table-image'
