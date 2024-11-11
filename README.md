@@ -106,3 +106,11 @@ docker-compose up --build
 ```
 
 El documento compose.yml se encargará de levantar tanto la API como el Frontend.
+
+## Ejecución de Tests
+
+Para ejecutar los tests dirigete a la carpeta frontend y ejecuta el siguiente comando:
+
+```bash
+npm run test
+```
