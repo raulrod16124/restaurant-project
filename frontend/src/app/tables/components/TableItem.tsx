@@ -44,8 +44,8 @@ export const TableItem = ({table}: IProps) => {
         <Image 
           src={tableImage[table.state]} 
           alt='table-image'
-          width={150}
-          height={150}
+          width={100}
+          height={100}
         />
         <p>{tableText[table.state]}</p>
       </div>

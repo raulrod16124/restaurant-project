@@ -1,70 +1,146 @@
 .menuContainer {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.menuContainer > div:not(:first-child) {
-    border-top: 1px solid #ccc;
+    width: 100%;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    color: #ff623f;
+    text-align: center;
 }
 
 .menuTitle {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2rem;
-    color: #4a90e2;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff623f;
+    animation: slideInFromTop 1s ease;
 }
-  
+
 .categoryCard {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    background-color: #fef9e7;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-  
+
 .categoryHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .categoryName {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
-}
-  
-.buttonContainer {
-    display: flex;
-    justify-content: end;
-    gap: 10px;
+    color: #f57c00;
 }
 
-.button{
-    margin: 10px 0;
-    cursor: pointer;
-}
-  
 .itemCard {
-    background-color: #f1f3f6;
-    border-radius: 6px;
-    padding: 0 10px;
-    margin: 8px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff3e0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
-  
+
 .itemDescription {
-    font-size: 1rem;
-    color: #555;
-}
-  
-.itemPrice {
+    font-size: 1.1rem;
+    color: #333333;
     font-weight: bold;
-    color: #4a90e2;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.iconButton {
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.iconButton:hover {
+    transform: scale(1.2);
+}
+
+.button {
+    background-color: #ff623f;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f57c00;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button svg {
+    margin-right: 5px;
+}
+
+.buttonContainer .button svg {
+    pointer-events: none;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.itemDescription {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+.itemDescription svg {
+    margin-right: 0.5rem;
+}
+
+.noCategoryMessage {
+    color: #ff623f;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.totalPriceContainer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid #ff623f;
 }
   

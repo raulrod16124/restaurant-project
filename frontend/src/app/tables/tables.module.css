@@ -1,102 +1,113 @@
+.tablesTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0;
+  letter-spacing: 1.5px;
+  animation: slideInFromTop 1s ease;
+}
+
 .tablesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #ff623f;
+  border-radius: 15px;
+  padding: .5rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.table:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.table img {
+  border-radius: 50%;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.table p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 .tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltipInfo {
-    border: 1px solid white;
-    visibility: hidden;
-    min-width: 120px;
-    width: max-content;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-.tooltipInfo::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
+  position: relative;
+  cursor: pointer;
 }
 
 .tooltip:hover .tooltipInfo {
-    visibility: visible;
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tooltipInfo {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background-color: #333;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
 }
 
 .tooltipInfoWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px 10px;
-    column-gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
 }
 
 .totalPriceContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px 10px;
-    column-gap: 10px;
-    border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-top: 1rem;
+  border-top: 1px solid #fff;
 }
 
-.table{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-.tableTitle{
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2rem;
-    color: #4a90e2;
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
-
-.backLink{
-    position: absolute;
-    top: 25px;
-    left: 50px;
-    text-decoration: none;
-    font-size: 50px;
-    font-weight: bolder;
-    color: #000;
-    width: 80px;
-    height: 50px;
-    border: 1px solid;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .3s ease-in-out;
-}
-
-.backLink:hover{
-    transform: scale(1.1);
-}
+  

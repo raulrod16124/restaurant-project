@@ -120,13 +120,13 @@ export default function Menu() {
                             <h2 className={styles.categoryName}>{category.name}</h2>
                             <div className={styles.buttonContainer}>
                                 <button 
-                                    className={styles.button} 
+                                    className={styles.iconButton} 
                                     onClick={() => deleteCategory(category.id)}
                                 >
                                     <FaTrash size={15} color="red" />
                                 </button>
                                 <button 
-                                    className={styles.button} 
+                                    className={styles.iconButton} 
                                     onClick={() => setEditingCategory(
                                         editingCategory?.name === category.name ? undefined :category
                                     )}
@@ -158,13 +158,13 @@ export default function Menu() {
                                     <p className={styles.itemDescription}>{item.description} - {item.price}€</p>
                                     <div className={styles.buttonContainer}>
                                         <button 
-                                            className={styles.button} 
+                                            className={styles.iconButton} 
                                             onClick={() => deleteItem(item.id)}
                                         >
                                             <FaTrash size={15} color="red" />
                                         </button>
                                         <button 
-                                            className={styles.button} 
+                                            className={styles.iconButton} 
                                             onClick={() => setEditingItem(
                                                 editingItem?.item.id === item.id ? undefined : { item, categoryId: category.id }
                                             )}
