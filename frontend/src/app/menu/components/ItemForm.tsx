@@ -40,14 +40,7 @@ const ItemForm = ({ onSave, initialData = {id: Date.now().toString(), descriptio
         className={styles.inputField}
         type="number"
         value={price < 1 ? "" : price}
-        onChange={(e) => {
-          const newValue = e.target.value;
-          if (!isNaN(Number(newValue)) && newValue !== "") {
-            setPrice(Number(newValue));
-          } else {
-            setPrice(0);
-          }
-        }}
+        onChange={(e) => setPrice(Number(e.target.value))}
         placeholder="Precio del producto"
       />
       {priceError && (

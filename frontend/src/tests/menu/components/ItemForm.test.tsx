@@ -11,7 +11,7 @@ describe("ItemForm Component", () => {
     const priceInput = screen.getByPlaceholderText("Precio del producto");
     
     expect(descriptionInput).toHaveValue("Pizza");
-    expect(priceInput).toHaveValue("10");
+    expect(priceInput).toHaveValue(10);
   });
 
   test("updates input fields when typing", () => {
@@ -21,10 +21,10 @@ describe("ItemForm Component", () => {
     const priceInput = screen.getByPlaceholderText("Precio del producto");
 
     fireEvent.change(descriptionInput, { target: { value: "Hamburguesa" } });
-    fireEvent.change(priceInput, { target: { value: "15" } });
+    fireEvent.change(priceInput, { target: { value: 15 } });
 
     expect(descriptionInput).toHaveValue("Hamburguesa");
-    expect(priceInput).toHaveValue("15");
+    expect(priceInput).toHaveValue(15);
   });
 
   test("calls onSave with correct values when form is submitted", () => {
@@ -36,7 +36,7 @@ describe("ItemForm Component", () => {
     const submitButton = screen.getByText("Guardar Producto");
 
     fireEvent.change(descriptionInput, { target: { value: "Tacos" } });
-    fireEvent.change(priceInput, { target: { value: "12" } });
+    fireEvent.change(priceInput, { target: { value: 12 } });
 
     fireEvent.click(submitButton);
 
@@ -56,12 +56,12 @@ describe("ItemForm Component", () => {
     const submitButton = screen.getByText("Guardar Producto");
 
     fireEvent.change(descriptionInput, { target: { value: "Nachos" } });
-    fireEvent.change(priceInput, { target: { value: "8" } });
+    fireEvent.change(priceInput, { target: { value: 8 } });
 
     fireEvent.click(submitButton);
-
+    
     expect(descriptionInput).toHaveValue("");
-    expect(priceInput).toHaveValue("");
+    expect(priceInput).toHaveValue(null);
   });
 
   test("does not submit form if price is less than 1", () => {
@@ -73,7 +73,7 @@ describe("ItemForm Component", () => {
     const submitButton = screen.getByText("Guardar Producto");
 
     fireEvent.change(descriptionInput, { target: { value: "Tacos" } });
-    fireEvent.change(priceInput, { target: { value: "0" } });
+    fireEvent.change(priceInput, { target: { value: 0 } });
 
     fireEvent.click(submitButton);
 
