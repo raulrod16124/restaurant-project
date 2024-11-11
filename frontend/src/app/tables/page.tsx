@@ -15,13 +15,12 @@ export default function Tables() {
 
   return (
     <div>
-      <Link href="/" className={styles.backLink}>{"<"}</Link>
-        <h1 className={styles.tablesTitle}>Mapa de las mesas:</h1>
-        <div className={styles.tablesContainer}>
-          {tables?.map( table => (
-            <TableItem key={table.id} table={table} />
-          ))}
-        </div>
+      <h1 className={styles.tablesTitle}>Mapa de las mesas:</h1>
+      <div className={styles.tablesContainer}>
+        {tables?.map( table => (
+          <TableItem key={table.id} table={table} />
+        ))}
+      </div>
     </div>
   );
 }
