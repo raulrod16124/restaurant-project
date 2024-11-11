@@ -15,7 +15,7 @@ describe("testing Home component", () => {
     })
     test("should render the Tables Link", () => {
         render(<Home />)
-        const tablesLink = screen.getByText("Tables");
+        const tablesLink = screen.getByText("Mesas");
         expect(tablesLink).toBeInTheDocument()
     })
     test("should render the Menu Link", () => {
